@@ -45,5 +45,5 @@ client.on('connect', function (connection) {
 });
 
 
-client.connect('ws://0.0.0.0:9003/tables/table-12');
+client.connect('ws://iafoosball.aau.dk:9003/tables/table-2');
 console.log('Connecting to IAfoosball...');
