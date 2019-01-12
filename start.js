@@ -75,34 +75,6 @@ ws.on('message', function incoming(data) {
 	}
 	
 });
-//var speed = 0;
-
-
-//Connection to Arduino
-/*
-if(fs.existsSync('/dev/ttyACM1')){
-	var port = new SerialPort('/dev/ttyACM1', {
-		baudRate: 115200
-	  });
-}else{
-	var port = new SerialPort('/dev/ttyACM0', {
-		baudRate: 115200
-	});
-}
-
-var port = new SerialPort('/dev/ttyACM1', function (err) {
-	if (err) {
-		var port = new SerialPort('/dev/ttyACM0', function (err) {
-			baudRate: 115200
-			if (err) {
-
-			}
-		});
-	  return console.log('Error tring other port: ', err.message);
-	}
-  });
-*/
-
 
 console.log("start");
 
@@ -172,77 +144,6 @@ if(read2==0){
 	sleep.msleep(1200);
 }
 
-/*
-	if(read1==0&&!hit1){
-		et = ElapsedTime.new().start();
-		hit1 = true;
-		console.log("Laser1 hit "+et);
-	}
-	if(read2==0&&hit1){
-		var time = et.getRawValue();
-		console.log("Laser2 hit");
-		console.log(time);
-		speed = 2.8/(time*0.0000001)*3.6;
-		console.log("speed "+speed);
-		hit1 = false;
-		redGoals++;
-		console.log('"'+redGoals+'"');
-		if(redGoals==10){
-			arduino.async('23');
-			redGoals = 0;
-			blueGoals = 0;
-			match_id = 0;
-			playing = false;
-		}else{
-			arduino.async('"'+redGoals+'"');
-		}
-		//var post = ('{"command": "addGoal", "values"{ "side":"red", "speed":' + speed + ',"position": "attack"}}');
-		//postData(post);
-		var command = ('{ "command": "addGoal", "values": { "speed": ' + speed + ', "side": "red", "position": "attack"  }}');
-		sendMsg(command);
-		sleep.msleep(1200);
-	}
-
-	if(read3==0&&!hit2){
-		et = ElapsedTime.new().start();
-		hit2 = true;
-		console.log("Laser3 hit "+et);
-	}
-	if(read4==0&&hit2){
-		var time = et.getRawValue();
-		console.log("Laser4 hit");
-		console.log(time);
-		speed = 2.8/(time*0.0000001)*3.6;
-		console.log("speed "+speed);
-		hit2 = false;
-		blueGoals++;
-		var postblue = blueGoals+10;
-		if(blueGoals==10){
-			arduino.async('22');
-			blueGoals = 0;
-			redGoals = 0;
-			match_id = 0;
-			playing = false;
-		}else{
-			arduino.async('"'+postblue+'"');
-		}
-		//var post = ('{"command": "addGoal", "values"{ "side":"blue", "speed":' + speed + ',"position": "attack"}}');
-		//postData(post);
-		var command = ('{ "command": "addGoal", "values": { "speed": ' + speed + ', "side": "blue", "position": "attack"  }}');
-		sendMsg(command);
-		sleep.msleep(1200);
-	}
-	if(playing){
-	if(et.getRawValue()>300000000000){
-		playing = false;
-		var post = ('{"removeGame":'+match_id+'}');
-		postData(post);
-		blueGoals = 0;
-		redGoals = 0;
-		arduino.async('26');
-	}
-	}
-	*/
 }
 function sendData(s){
 	if (connection.connected) {
