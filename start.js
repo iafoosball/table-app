@@ -121,7 +121,7 @@ console.log('Laser1 '+laser1.digitalRead());
 console.log('Laser2 '+laser2.digitalRead());
 console.log("asd");
 
-}
+};
 
 
 var hit1 = false;

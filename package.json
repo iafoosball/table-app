@@ -1,0 +1,37 @@
+{
+  "name": "table-app",
+  "version": "2.0.0",
+  "description": "iafoosball",
+  "main": "testWSS.js",
+  "dependencies": {
+    "async": "^2.6.1",
+    "elapsed-time": "^0.0.1",
+    "async-functions": "^0.0.2",
+    "infinite": "^0.5.2",
+    "infinite-loop": "^0.2.2",
+    "ip": "^1.1.5",
+    "onoff": "^1.1.9",
+    "pigpio": "^0.6.4",
+    "pi-blaster.js": "^0.1.1",
+    "pi-servo": "^1.0.2",
+    "serialport": "^6.0.4",
+    "sleep": "^5.1.1",
+    "websocket": "^1.0.28",
+    "websockets": "^0.2.0",
+    "ws": "^6.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iafoosball/table-app.git"
+  },
+  "author": "iaf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iafoosball/table-app/issues"
+  },
+  "homepage": "https://github.com/iafoosball/table-app#readme"
+}
