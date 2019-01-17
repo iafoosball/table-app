@@ -2,7 +2,7 @@
   "name": "table-app",
   "version": "2.0.0",
   "description": "iafoosball",
-  "main": "testWSS.js",
+  "main": "start.js",
   "dependencies": {
     "async": "^2.6.1",
     "elapsed-time": "^0.0.1",
