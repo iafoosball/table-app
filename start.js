@@ -6,7 +6,7 @@ var InfiniteLoop = require('infinite-loop');
 var ip = require('ip');
 var il = new InfiniteLoop();
 
-var port = new SerialPort('/dev/ttyACM0', {
+var port = new SerialPort('/dev/ttyACM1', {
 	baudRate: 115200
 });
 
