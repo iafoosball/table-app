@@ -20,7 +20,7 @@ var playing = false;
 const WebSocket = require('ws');
 var connected = false;
 var options = {rejectUnauthorized: false};
-const ws = new WebSocket('wss://iafoosball.me:9003/tables/table-1',options);
+const ws = new WebSocket('wss://iafoosball.me:9003/tables/?tableID=table-1',options);
  
 ws.on('open', function open() {
   //ws.send('something');
