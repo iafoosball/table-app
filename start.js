@@ -6,7 +6,7 @@ var InfiniteLoop = require('infinite-loop');
 var ip = require('ip');
 var il = new InfiniteLoop();
 
-var port = new SerialPort('/dev/ttyACM1', {
+var port = new SerialPort('/dev/ttyACM0', {
 	baudRate: 115200
 });
 
@@ -46,6 +46,14 @@ ws.on('message', function incoming(data) {
 			arduino.async('21');
 			playing = true;
 	}
+	/*
+	if(light==true){
+		arduino.async('100')
+	}
+	if(light=false){
+		arduino.async('101')
+	}
+	*/
 	if(playing&&json.started==false){
 		if(redGoals>blueGoals){
 			arduino.async('23');
@@ -72,6 +80,7 @@ ws.on('message', function incoming(data) {
 	}
 	}catch(e){
 		console.log("Not valid json");
+		console.log(e);
 	}
 	
 });
